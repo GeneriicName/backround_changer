@@ -95,8 +95,8 @@ while True:
         print("error -", e)
         continue
     con = WMI(computer=pc)
-    service = con.Win32_Process(name="explorer.exe")
-    for proc in service:
+    procs = con.Win32_Process(name="explorer.exe")
+    for proc in procs:
         proc.Terminate()
     sleep(0.6)
     con.Win32_Process.Create(CommandLine="explorer.exe")
