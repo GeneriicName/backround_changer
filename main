@@ -87,7 +87,7 @@ while True:
                 with OpenKey(reg, fr"{sid_}\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System", 0,
                              KEY_ALL_ACCESS) as key:
                     SetValueEx(key, "Wallpaper", 0, REG_SZ, f"c:\\{ct}")
-                    SetValueEx(key, "WallpaperStyle", 0, REG_SZ, "0")
+                    SetValueEx(key, "WallpaperStyle", 0, REG_SZ, "3")
             except ValueError:
                 pass
     except Exception as e:
